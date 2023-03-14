@@ -10,5 +10,19 @@
         "firebase-debug.*.log"
       ]
     }
-  ]
+  ],
+  "hosting": {
+    "rewrites": [
+      {
+        "source": "/",
+        "function": "index",
+        "region": "us-central1"
+      },
+      {
+        "source": "/generate**",
+        "function": "getBlogCover",
+        "region": "us-central1"
+      }
+    ]
+  }
 }
